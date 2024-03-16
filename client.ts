@@ -4,7 +4,7 @@ import { getAccount } from "./util";
 const CLIENT_ID = 'the-user.testnet'
 const CLIENT_PRIVATE_KEY = 'ed25519:4PcuqzFyK8yas151xKBoBbUe5DLCd4RcpekW5rjKTsUtabkvGqwacgmnBECDdzEQAvozG5spguF2yp5knjNjDHAt'
 const NETWORK_ID = 'testnet'
-const CONTRACT_ID = 'hello.near-examples.near'
+const CONTRACT_ID = 'hello.near-examples.testnet'
 const SERVER_URL = 'http://localhost:5000/'
 
 async function sendRelay() {
@@ -12,7 +12,9 @@ async function sendRelay() {
     'set_greeting',
     {
         greeting: "hello"
-   },);
+   },
+   "3000000000000"
+   );
 
   const account = await getAccount(NETWORK_ID, CLIENT_ID, CLIENT_PRIVATE_KEY);
 
