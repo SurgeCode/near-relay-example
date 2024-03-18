@@ -1,6 +1,6 @@
 ## NEAR RELAY EXAMPLE
 
-This repository approaches what the an extremly simple client/server relayer example.
+This repository approaches an extremly simple client/server relayer example.
 
 ### 1. Install packages
 ```
