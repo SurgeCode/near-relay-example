@@ -22,7 +22,7 @@ app.post('/', async (req: Request, res: Response) => {
     RELAYER_PRIVATE_KEY,
   );
 
-  const receipts = await Promise.all(
+  const outcomes = await Promise.all(
     serializedTxs.map(async (serializedTx) => {
       const deserializedTx: SignedDelegate = deserialize(
         SCHEMA.SignedDelegate,
@@ -36,7 +36,7 @@ app.post('/', async (req: Request, res: Response) => {
     }),
   );
 
-  res.json({ message: 'Relayed', data: receipts });
+  res.json({ message: 'Relayed', data: outcomes });
 });
 
 app.listen(5000, () => {
