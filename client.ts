@@ -14,7 +14,7 @@ async function sendRelay() {
     {
       greeting: 'hello',
     },
-    '3000000000000',
+    3000000000000n,
   );
 
   const account = await getAccount(NETWORK_ID, CLIENT_ID, CLIENT_PRIVATE_KEY);
@@ -30,6 +30,11 @@ async function sendRelay() {
     body: JSON.stringify([Array.from(encodeSignedDelegate(signedDelegate))]),
     headers: new Headers({ 'Content-Type': 'application/json' }),
   });
+  if (res.ok) {
+    console.log(await res.json());
+  } else {
+    console.error(await res.text());
+  }
 }
 
 sendRelay();
