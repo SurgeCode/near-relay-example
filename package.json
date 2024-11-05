@@ -10,19 +10,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@near-js/accounts": "^1.0.4",
-    "@near-js/crypto": "^1.2.1",
-    "@near-js/keystores": "^0.0.9",
-    "@near-js/signers": "^0.1.1",
-    "@near-js/transactions": "1.1.2",
+    "@near-js/accounts": "^1.3.1",
+    "@near-js/crypto": "^1.4.1",
+    "@near-js/keystores": "^0.2.1",
+    "@near-js/signers": "^0.2.1",
+    "@near-js/transactions": "1.3.1",
     "borsh": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "near-api-js": "3.0.4"
+    "near-api-js": "5.0.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/node": "^20.11.20"
+    "@types/node": "^20.11.20",
+    "ts-node": "^10.9.2"
   }
 }
